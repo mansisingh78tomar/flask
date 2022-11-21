@@ -1,19 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify,request
 
 app = Flask(__name__)
 
-books_db =[
-    {
-        'name':'secret',
-        'price': 400
-    },
-    {
-        'name':'Deep work ',
-        'price':500
-    }
-]
-
-#retrive all books
 @app.route('/')
 def home(): 
     return jsonify ({'Message':'Welcome'})
@@ -27,7 +15,5 @@ def on():
 def off():
     return jsonify ({'state':'0'})
 
-#retrive one books
-#create a books
-
-app.run()
+if __name__=='__main__':
+    app.run(debuge=true)
